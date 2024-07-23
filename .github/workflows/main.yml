@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: 3.9  
       - name: Build Docker image
-        run: docker build -t your-dockerhub-username/weather-app:latest .
+        run: docker build -t weather-app .
      
       
      
