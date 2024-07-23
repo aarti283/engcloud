@@ -21,6 +21,8 @@ jobs:
         run: poetry install
       - name: Install black
         run: poetry run pip install black
+      - name: Install flake8
+        run: poetry run pip install flake8
 
       - name: Lint code
         run: bin/lint   
