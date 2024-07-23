@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: my-step
-        run: echo "Hello World commit 2:"
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Python
