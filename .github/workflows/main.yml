@@ -19,6 +19,8 @@ jobs:
 
       - name: Install dependencies
         run: poetry install
+      - name: Install black
+        run: poetry run pip install black
 
       - name: Lint code
         run: bin/lint   
