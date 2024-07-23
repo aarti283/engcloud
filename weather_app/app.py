@@ -1,11 +1,10 @@
 from flask import Flask, jsonify
 import requests
-import os
 
 app = Flask(__name__)
 
 NWS_API_URL = "https://api.weather.gov/stations/KNYC/observations/latest"
-API_KEY =  "weather-883d37bb24536f00b4r"
+API_KEY = "weather-883d37bb24536f00b4r"
 
 
 @app.route("/weather")
@@ -15,7 +14,10 @@ def get_weather():
     data = response.json()
 
     if response.status_code != 200:
-        return (jsonify({"error": "Failed to get weather data"}), response.status_code)
+        return (
+            jsonify({"error": "Failed to get weather data"}),
+            response.status_code,
+        )  # noqa: E501
 
     latest_observation = data["properties"]
 
