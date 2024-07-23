@@ -16,5 +16,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9  
+      - name: Build Docker image
+        run: docker build -t your-dockerhub-username/weather-app:latest .
+     
       
      
