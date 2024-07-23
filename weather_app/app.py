@@ -16,8 +16,8 @@ def get_weather():
     if response.status_code != 200:
         return (
             jsonify({"error": "Failed to get weather data"}),
-            response.status_code,
-        )  # noqa: E501
+            response.status_code, 
+        )   # noqa: E501
 
     latest_observation = data["properties"]
 
