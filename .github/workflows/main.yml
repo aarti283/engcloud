@@ -13,7 +13,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9  
+          python-version: 3.11
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Lint code
+        run: bin/lint   
       - name: Build Docker image
         run: docker build -t weather-app .
      
